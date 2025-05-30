@@ -1,17 +1,17 @@
-
 import { Task } from '@/types/task';
 import TaskTable from './TaskTable';
-import { ListTodo, Zap } from 'lucide-react';
+import { ListTodo, Zap, BrainCircuit } from 'lucide-react';
 
 interface TaskBoardProps {
   tasks: Task[];
   onUpdateTask: (taskId: string, updates: Partial<Task>) => void;
   onDeleteTask: (taskId: string) => void;
+  isLoading?: boolean;
 }
 
-const TaskBoard = ({ tasks, onUpdateTask, onDeleteTask }: TaskBoardProps) => {
+const TaskBoard = ({ tasks, onUpdateTask, onDeleteTask, isLoading = false }: TaskBoardProps) => {
   return (
-    <div className="max-w-6xl mx-auto">
+    <div className="max-w-full mx-auto px-4">
       <div className="bg-white/80 backdrop-blur-sm rounded-2xl shadow-2xl border border-white/50 overflow-hidden hover:shadow-3xl transition-all duration-300">
         <div className="px-8 py-6 bg-gradient-to-r from-purple-600 via-blue-600 to-indigo-600 text-white">
           <div className="flex items-center gap-3">
@@ -30,7 +30,17 @@ const TaskBoard = ({ tasks, onUpdateTask, onDeleteTask }: TaskBoardProps) => {
           </div>
         </div>
         
-        {tasks.length === 0 ? (
+        {isLoading ? (
+          <div className="p-16 text-center">
+            <div className="mb-6">
+              <div className="w-24 h-24 mx-auto bg-gradient-to-r from-purple-100 to-blue-100 rounded-full flex items-center justify-center mb-4 animate-pulse">
+                <BrainCircuit className="w-12 h-12 text-purple-400 animate-spin duration-3000" />
+              </div>
+            </div>
+            <div className="text-slate-600 text-xl mb-2 font-medium">Processing your task...</div>
+            <div className="text-slate-500 text-lg">Using AI to understand your request ✨</div>
+          </div>
+        ) : tasks.length === 0 ? (
           <div className="p-16 text-center">
             <div className="mb-6">
               <div className="w-24 h-24 mx-auto bg-gradient-to-r from-purple-100 to-blue-100 rounded-full flex items-center justify-center mb-4">
