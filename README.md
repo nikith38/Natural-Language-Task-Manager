@@ -2,7 +2,7 @@
 
 Transform your thoughts into organized tasks with AI-powered parsing ✨
 
-![Natural Language Task Manager](./public/assets/main-interface.png)
+![Natural Language Task Manager](https://raw.githubusercontent.com/nikith38/Natural-Language-Task-Manager/main/assets/main-interface.png)
 
 ## ✨ Key Features
 
@@ -17,10 +17,10 @@ Transform your thoughts into organized tasks with AI-powered parsing ✨
 ## 📸 Screenshots
 
 ### Main Interface with AI Parsing
-![Task Manager Interface](./public/assets/main-interface.png)
+![Task Manager Interface](https://raw.githubusercontent.com/nikith38/Natural-Language-Task-Manager/main/assets/main-interface.png)
 
 ### Editing Tasks
-![Editing Tasks](./public/assets/editing-tasks.png)
+![Editing Tasks](https://raw.githubusercontent.com/nikith38/Natural-Language-Task-Manager/main/assets/editing-tasks.png)
 
 ## 🧠 Advanced AI Parsing Architecture
 
